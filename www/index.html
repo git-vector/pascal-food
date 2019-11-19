@@ -15,7 +15,6 @@
   <div>
 
   </div>
-  <a href="/cgi-bin/menu">menu</a>
 
   <table id="foodtable" class="w3-table-all w3-card-4">
       <tr>
@@ -35,7 +34,7 @@
     </table>
 
   <div class="w3-panel w3-teal">
-    <p id="foot01"> {{footer}} {{year}}</p>
+    <p id="foot01"> {{footer}} {{year}} <a href="/cgi-bin/menu">json-menu</a> </p>
   </div>
 
 </div>
@@ -44,7 +43,12 @@
     var myObject = {"footer" : "Kopiralyt", "year" : "2019"};
     w3.displayObject("foot01", myObject);
 
-    w3.displayObject("foodtable", {"foods":[{"name":"pacal","price":850},{"name":"krumplis hal","price":1200},{"name":"hagymas bab","price":990},{"name":"palacsinta","price":440}]});
+    //w3.displayObject("foodtable", {"foods":[{"name":"pacal","price":850},{"name":"krumplis hal","price":1200},{"name":"hagymas bab","price":990},{"name":"palacsinta","price":440}]});
+    w3.getHttpObject("/cgi-bin/menu", displayMenu);
+
+    function displayMenu(myObject) {
+    w3.displayObject("foodtable", myObject);
+}
     
 </script>
 </body>
