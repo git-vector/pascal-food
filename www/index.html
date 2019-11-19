@@ -3,6 +3,7 @@
 <head>
   <title>Menu</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 <body>
 <div class="w3-container" >
@@ -16,47 +17,35 @@
   </div>
   <a href="/cgi-bin/menu">menu</a>
 
-  <table class="w3-table-all w3-card-4">
+  <table id="foodtable" class="w3-table-all w3-card-4">
       <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Points</th>
+        <th>Name</th>
+        <th>Price</th>
         <th>Actions</th>
       </tr>
-      <tr>
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
+      <tr w3-repeat="foods">
+        <td>{{name}}</td>
+        <td>{{price}}</td>
         <td>
             <button class="w3-button w3-circle w3-teal">+</button>
             <button class="w3-button w3-circle w3-black">-</button>
         </td>
       </tr>
-      <tr>
-          <td>Jill</td>
-          <td>Smith</td>
-          <td>50</td>
-          <td>
-              <button class="w3-button w3-circle w3-teal">+</button>
-              <button class="w3-button w3-circle w3-black">-</button>
-          </td>
-        </tr>
-        <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-            <td>
-                <button class="w3-button w3-circle w3-teal">+</button>
-                <button class="w3-button w3-circle w3-black">-</button>
-            </td>
-          </tr>
       
     </table>
 
   <div class="w3-panel w3-teal">
-    <p>Kopiralyt 2019</p>
+    <p id="foot01"> {{footer}} {{year}}</p>
   </div>
-  
+
 </div>
+
+<script>
+    var myObject = {"footer" : "Kopiralyt", "year" : "2019"};
+    w3.displayObject("foot01", myObject);
+
+    w3.displayObject("foodtable", {"foods":[{"name":"pacal","price":850},{"name":"krumplis hal","price":1200},{"name":"hagymas bab","price":990},{"name":"palacsinta","price":440}]});
+    
+</script>
 </body>
 </html>
