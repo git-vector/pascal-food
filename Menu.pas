@@ -15,17 +15,22 @@ begin
 end;
 
 begin
+  addFood('dreher', 500);
+  
   foods := getAllFood();
 
   if ( GetEnv('HTTP') <> '' ) then
     httpHeader();
 
   writeln('{ "foods": [');
-  for i:= 0 to 3 do
+  for i:= 0 to Length(foods) do
   begin
-      if ( i > 0 ) then
+      if ( foods[i].name <> '' ) then
+      begin
+        if ( i > 0 ) then
           write(',');
-      foods[i].toJson();
+        foods[i].toJson();
+      end;
   end;
   writeln(']}');
   
