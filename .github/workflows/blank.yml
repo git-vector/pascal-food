@@ -10,7 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: install pascal compiler
-      run: sudo apt-get -qq update && sudo apt-get install fp-compiler -y
+      run:  |
+        #sudo apt-get -qq update
+        sudo apt-get install fp-compiler -y
     - name: Run a multi-line script
       run: |
         echo Add other actions to build
