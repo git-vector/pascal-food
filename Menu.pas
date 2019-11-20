@@ -2,7 +2,7 @@ program Menu
 ;
 
 uses
-  foodunit, dos;
+  foodunit, dos, harcsa;
 
 var 
   i: integer;
