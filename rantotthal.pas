@@ -1,4 +1,7 @@
 
 unit foodunit;
 
-addFood('rantotthal', 777);
+initialization
+begin
+	addFood('rantotthal', 777);
+end;
