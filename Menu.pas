@@ -15,7 +15,7 @@ begin
 end;
 
 begin
-  addFood('dreher', 510);
+  addFood('dreher', 500);
   
   foods := getAllFood();
 
