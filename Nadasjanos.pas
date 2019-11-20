@@ -1,4 +1,4 @@
-program Menu
+program nadasjanos
 ;
 
 uses
