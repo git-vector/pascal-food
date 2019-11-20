@@ -48,6 +48,7 @@ begin
   addFood('krumplis hal', 1200);
   addFood('hagymas bab', 990);
   addFood('palacsinta', 440);
+  addFood('steak', 999);
 end;
 
 end.
