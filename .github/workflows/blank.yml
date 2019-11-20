@@ -11,10 +11,11 @@ jobs:
     - uses: actions/checkout@v1
     - name: install pascal compiler
       run:  |
-        #sudo apt-get -qq update
         sudo apt-get install fp-compiler -y
     - name: Run a multi-line script
       run: |
         echo Add other actions to build
+        ls -l $GITHUB_WORKSPACE
         cd $GITHUB_WORKSPACE
-        fpc Main.pas
+        ls -l 
+        fpc Menu.pas
