@@ -1,0 +1,14 @@
+unit bab_leves
+;
+
+uses
+  foodunit;
+
+
+implementation
+
+initialization
+begin
+	addFood('dreher', 500);
+end;
+end.
