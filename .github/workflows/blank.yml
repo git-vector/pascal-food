@@ -13,5 +13,6 @@ jobs:
       run: sudo apt-get -qq update && sudo apt-get install fp-compiler -y
     - name: Run a multi-line script
       run: |
-        echo Add other actions to build,
+        echo Add other actions to build
+        cd $GITHUB_WORKSPACE
         fpc Main.pas
