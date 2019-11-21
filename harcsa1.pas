@@ -1,14 +1,14 @@
 unit harcsa1;
-
+interface
 uses
   foodunit;
 
-interface
+
 
 // private - - - - - - - - - - - - - - - - - - - - - - - - -
 implementation
-
+initialization
 begin
   addFood('harcsa', 850);
-
+end;
 end.
